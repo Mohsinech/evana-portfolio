@@ -1,0 +1,48 @@
+.about {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  position: relative;
+}
+
+.profileImage {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  font-family: "montreal", sans-serif;
+  color: #171717;
+  font-size: 5rem;
+  font-weight: 200;
+  z-index: 100;
+}
+
+/* scroll-reveal.css */
+.scroll-reveal {
+  margin: 20px 0;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.word {
+  display: inline-block;
+}
+
+.scrollText {
+  color: #4f4f4f;
+  font-family: "grotesfsk", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+/* LOGO */
+.logo h1 {
+  color: #171717;
+  font-family: "grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav ul li a {
+  color: #171717;
+  font-family: "grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.time {
+  color: #171717;
+  font-family: "grotesk", sans-serif;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

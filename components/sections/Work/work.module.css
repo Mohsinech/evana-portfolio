@@ -1,0 +1,13 @@
+.work {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scrollText {
+  color: #4f4f4f;
+  font-family: "grotesfsk", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}

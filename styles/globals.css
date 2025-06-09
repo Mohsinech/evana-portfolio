@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #e5e7e6;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -185,4 +186,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
