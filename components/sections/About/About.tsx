@@ -7,7 +7,7 @@ import ScrollFloat from "@/components/ScrollFloat/ScrollFloat";
 export const About = ({
   aboutRef,
 }: {
-  aboutRef: React.RefObject<HTMLElement>;
+  aboutRef: React.RefObject<HTMLElement | null>;
 }) => {
   return (
     <section className={styles.about} ref={aboutRef}>

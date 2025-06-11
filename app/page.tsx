@@ -7,8 +7,8 @@ import Lenis from "lenis";
 import { Footer, Header } from "@/components/index";
 
 export default function Home() {
-  const aboutRef = useRef<HTMLElement>(null);
-  const workRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const workRef = useRef<HTMLElement | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  const scrollTo = (ref: React.RefObject<HTMLElement>) => {
+  const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
     if (ref.current && lenisRef.current) {
       lenisRef.current.scrollTo(ref.current, {
         duration: 1.2,

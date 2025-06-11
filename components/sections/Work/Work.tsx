@@ -7,7 +7,7 @@ import WorkCard from "@/components/WorkCard/WorkCard";
 export const Work = ({
   workRef,
 }: {
-  workRef: React.RefObject<HTMLElement>;
+  workRef: React.RefObject<HTMLElement | null>;
 }) => {
   return (
     <section className={styles.work} ref={workRef}>
