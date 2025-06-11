@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./app.module.css";
-import { About, Hero, Work } from "@/components/sections";
+import { About, Hero, Work, Cta } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <Hero />
       <About />
       <Work />
+      <Cta />
     </main>
   );
 }

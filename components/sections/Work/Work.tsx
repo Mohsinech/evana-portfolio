@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./work.module.css";
 import ScrollFloat from "@/components/ScrollFloat/ScrollFloat";
+import { workCardData } from "@/components/WorkCard/data";
+import WorkCard from "@/components/WorkCard/WorkCard";
 
 const Work = () => {
   return (
@@ -15,6 +17,13 @@ const Work = () => {
       >
         (02) Work
       </ScrollFloat>
+
+      {/* Work Section */}
+      <div className={styles.work_content}>
+        {workCardData.map((item) => (
+          <WorkCard key={item.id} {...item} />
+        ))}
+      </div>
     </section>
   );
 };

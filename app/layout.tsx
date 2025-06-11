@@ -4,7 +4,7 @@ import React from "react";
 import "@/styles/globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import useLenisScroll from "@/hooks/useLenisScroll";
-import { Header } from "@/components/index";
+import { Footer, Header } from "@/components/index";
 
 export default function RootLayout({
   children,
@@ -18,12 +18,13 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <head>
-          <title>Evan Portfolio</title>
+          <title>Evana Portfolio</title>
           <link rel="icon" type="icon/icon" href="/favicon.ico" />
         </head>
         <body>
           <Header />
           {children}
+          <Footer />
         </body>
       </html>
     </ViewTransitions>
