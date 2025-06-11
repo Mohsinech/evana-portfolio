@@ -4,9 +4,13 @@ import ScrollFloat from "@/components/ScrollFloat/ScrollFloat";
 import { workCardData } from "@/components/WorkCard/data";
 import WorkCard from "@/components/WorkCard/WorkCard";
 
-const Work = () => {
+export const Work = ({
+  workRef,
+}: {
+  workRef: React.RefObject<HTMLElement>;
+}) => {
   return (
-    <section className={styles.work}>
+    <section className={styles.work} ref={workRef}>
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"

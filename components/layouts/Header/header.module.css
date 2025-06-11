@@ -29,8 +29,9 @@
 
 .nav ul li a {
   color: #171717;
-  font-family: "grotesk", sans-serif;
+  font-family: "montreal", sans-serif;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .time {

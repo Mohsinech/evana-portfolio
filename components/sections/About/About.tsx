@@ -4,9 +4,13 @@ import styles from "./about.module.css";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import ScrollFloat from "@/components/ScrollFloat/ScrollFloat";
 
-const About = () => {
+export const About = ({
+  aboutRef,
+}: {
+  aboutRef: React.RefObject<HTMLElement>;
+}) => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} ref={aboutRef}>
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"

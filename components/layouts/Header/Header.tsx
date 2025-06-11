@@ -1,33 +1,52 @@
-import React from "react";
+// Header.tsx
+import React, { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import { Link } from "next-view-transitions";
 
-const Header = () => {
+const Header = ({
+  onScrollToAbout,
+  onScrollToWork,
+}: {
+  onScrollToAbout: () => void;
+  onScrollToWork: () => void;
+}) => {
+  const [time, setTime] = useState<string>("00:00");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      setTime(`${hours}:${minutes}`);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className={styles.header}>
-      {/* LOGO */}
       <div className={styles.logo}>
         <Link href="/">
-          <h1>Eva Martinez</h1>
+          <h1>Evana </h1>
         </Link>
       </div>
 
-      {/* Navbar x Email*/}
       <div className={styles.nav}>
         <ul>
           <li>
-            <a href="#">About</a>
+            <a onClick={onScrollToAbout}>About</a>
           </li>
           <li>
-            <a href="#">Work</a>
+            <a onClick={onScrollToWork}>Work</a>
           </li>
           <li>
-            <a href="#">Freelancer designer & developer</a>
+            <a href="#">Barcelona &bull; Spain</a>
           </li>
         </ul>
-
-        {/*  time */}
-        <h1 className={styles.time}>[ 00:00 ]</h1>
+        <h1 className={styles.time}>[ {time} ]</h1>
       </div>
     </header>
   );
