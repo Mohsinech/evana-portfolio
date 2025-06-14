@@ -11,3 +11,25 @@
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+
+/* Responsive For 1024px */
+@media (max-width: 1024px) {
+  .work_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+/* Responsive For 620px */
+@media (max-width: 620px) {
+  .work {
+    padding: 0 1rem;
+  }
+
+  .work_content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

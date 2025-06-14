@@ -33,6 +33,7 @@ const Hero = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        className={styles.heroText}
       >
         <TextPressure
           text="Evana."
@@ -49,11 +50,7 @@ const Hero = () => {
       </div>
       {/* Image */}
       <div className={styles.profileImage} ref={imageRef}>
-        <DecayCard
-          width={500}
-          height={600}
-          image="/assets/images/profile.jpeg"
-        ></DecayCard>
+        <DecayCard image="/assets/images/profile.jpeg"></DecayCard>
       </div>
     </section>
   );
